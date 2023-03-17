@@ -1,5 +1,5 @@
 # graphpp - Graph PingPong
-Specific strings computation from variation graphs.
+`graphpp` computes specific strings from variation graphs by implementing the [PingPong algorithm](https://academic.oup.com/bioinformaticsadvances/article/1/1/vbab005/6290003) on the [gcsa2 index](https://github.com/jltsiren/gcsa2).
 
 ### Prerequisites
 * [vg](https://github.com/vgteam/vg)
