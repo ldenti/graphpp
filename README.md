@@ -16,12 +16,18 @@ cd ..
 
 ### Usage
 ```
-# index a graph with vg
-vg index -g <graph.gcsa2> <graph.vg>
-# compute specific strings
-graphpp [-f FLANK] <graph.gcsa2> <query.fx>
+./graphpp [-f FLANK] <graph.gcsa2> <query.fx>
+```
+
+### Example
+```
+cd example
+vg convert -g graph.gfa -v > graph.vg
+vg index -g graph.gcsa2 graph.vg
+../graphpp graph.gcsa2 seqs.fa > specific.fa
 ```
 
 ### TODO
-- [ ] example
+- [X] example
+- [ ] avoid second assembly round if flank is 0
 - [ ] multithreading
