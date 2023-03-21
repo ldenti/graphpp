@@ -16,6 +16,7 @@ cd ..
 
 ### Usage
 ```
+./graphpp -h
 ./graphpp [-f FLANK] <graph.gcsa2> <query.fx>
 ```
 
@@ -29,5 +30,7 @@ vg index -g graph.gcsa2 graph.vg
 
 ### TODO
 - [X] example
-- [ ] avoid second assembly round if flank is 0
+- [X] ~avoid second assembly round if flank is 0~
+- [X] do just one assembly round
+- [X] support for fa and fq
 - [ ] multithreading
