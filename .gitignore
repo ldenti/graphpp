@@ -1,4 +1,6 @@
 *~
+graphpp
 .vscode/
 build/
-graphpp
+example/
+.snakemake/
