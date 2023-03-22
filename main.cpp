@@ -155,7 +155,7 @@ int main(int argc, char *argv[]) {
   gzFile fp = gzopen(opt::fx_path.c_str(), "r");
   kseq_t *seq = kseq_init(fp);
   int i = 0;
-  int n = 0;
+  int n = 1;
   bool is_last_batch = false;
   while (!is_last_batch) {
     cerr << "Loading   batch " << n << ".."
