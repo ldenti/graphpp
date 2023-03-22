@@ -128,8 +128,11 @@ bool load_batch(kseq_t *seq, vector<tuple<string, string, string>> &input) {
   int l = 0;
   int i = 0;
   while (i < opt::b && (l = kseq_read(seq)) >= 0) {
-    input[i] = make_tuple(string(seq->name.s), string(seq->seq.s),
-                          string(seq->qual.s));
+    if (seq->qual.l == 0)
+      input[i] = make_tuple(string(seq->name.s), string(seq->seq.s), "");
+    else
+      input[i] = make_tuple(string(seq->name.s), string(seq->seq.s),
+                            string(seq->qual.s));
     ++i;
   }
   return l < 0;
